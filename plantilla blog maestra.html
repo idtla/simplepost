@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!--================ Favicon ================-->
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <!--================ Basic page needs ================-->
+  <title>{{TITLE}} | Blog</title>
+  <meta charset="UTF-8" />
+  <meta name="author" content="Daniela Fabianesi" />
+  <meta name="description" content="{{META_DESCRIPTION}}" />
+  <!--================ Mobile specific metas ================-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="{{ARTICLE_URL}}" />
+  
+  <!-- Schema Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{TITLE}}",
+    "author": {
+      "@type": "Person",
+      "name": "Daniela Fabianesi"
+    },
+    "datePublished": "{{PUBLISHED_TIME}}",
+    "image": "images/blog/{{FEATURE_IMAGE}}",
+    "articleBody": "{{META_DESCRIPTION}}"
+  }
+  </script>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="{{TITLE}}" />
+  <meta property="og:description" content="{{META_DESCRIPTION}}" />
+  <meta property="og:image" content="{{SITE_URL}}/images/blog/{{FEATURE_IMAGE}}" />
+  <meta property="og:url" content="{{ARTICLE_URL}}" />
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{TITLE}}" />
+  <meta name="twitter:description" content="{{META_DESCRIPTION}}" />
+  <meta name="twitter:image" content="{{SITE_URL}}/images/blog/{{FEATURE_IMAGE}}" />
+
+  <!--================ Google web fonts ================-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Lato:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons%7CMaterial+Icons+Outlined%7CMaterial+Icons+Two+Tone%7CMaterial+Icons+Round%7CMaterial+Icons+Sharp"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/fontawesome-all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="vendors/arcticmodal/jquery.arcticmodal-0.3.css" />
+  <link rel="stylesheet" href="vendors/owl-carousel/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="vendors/fancybox/jquery.fancybox.min.css" />
+  <!--================ Theme CSS ================-->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  
+  <!-- Custom CSS for date format -->
+  <style>
+    .mad-entities.with-date .mad-entity .mad-entity-content .mad-entity-date span:last-child {
+      font-family: 'Lato', sans-serif;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      letter-spacing: 2px;
+      text-align: center;
+      width: 100%;
+    }
+  </style>
+  <!--================ Vendor JS ================-->
+</head>
+
+<body>
+  <div class="mad-preloader"></div>
+  <div id="mad-page-wrapper" class="mad-page-wrapper">
+    <!--================ Search Modal ================-->
+    <div class="mad-d-none">
+      <div id="search-modal" class="mad-modal mad-modal--search">
+        <h6 class="mad-title">Search</h6>
+        <!--================ Search Form ================-->
+        <form class="mad-search-section">
+          <input type="text" placeholder="Start Typing here..." />
+          <button type="submit" class="btn"><i class="material-icons">search</i><span>search</span></button>
+        </form>
+        <!--================ End of Search Form ================-->
+        <button type="button" class="arcticmodal-close">
+          <i class="material-icons">close</i>
+        </button>
+      </div>
+    </div>
+<!--================ Header Modificado ================-->
+<header id="mad-header" class="mad-header">
+  <div class="mad-header-section--sticky-xl">
+      <div class="container-fluid">
+          <div class="mad-header-items">
+              <!--================ Logo ================-->
+              <div class="mad-header-item">
+                  <a href="index.html" class="mad-logo"><img src="images/logo.png" alt="Logo de la empresa" /></a>
+              </div>
+
+              <!--================ Redes Sociales ================-->
+              <div class="mad-header-item">
+                  <div class="mad-social-icons style-2 size-small">
+                      <ul>
+                          <li><a href="https://www.facebook.com/share/RUpQLHiJmBzqzJbW/"><i class="fab fa-facebook-f"></i></a></li>
+                          <li><a href="https://instagram.com/fabianesidanielamoreno"><i class="fab fa-instagram"></i></a></li>
+                          <li><a href="https://www.tiktok.com/@fabianesidanielamoreno"><i class="fab fa-tiktok"></i></a></li>
+                          <li><a href="https://www.linkedin.com/in/daniela-moreno-363718150/"><i class="fab fa-linkedin-in"></i></a></li>
+                      </ul>
+                  </div>
+              </div>
+
+              <!--================ Enlace a la Primera Consulta ================-->
+              <div class="mad-header-item">
+                  <div class="mad-actions">
+                      <div class="mad-col">
+                          <a href="https://wa.me/34619270999?text=Quiero%20reservar%20una%20cita" class="btn">Pide Cita</a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</header>
+<!--================ End of Header Modificado ================-->
+    <!--================ Breadcrumb ================-->
+    <div class="mad-breadcrumb with-bg-img with-overlay" data-bg-image-src="images/blog/{{FEATURE_IMAGE}}">
+      <div class="container wide">
+        <h1 class="mad-page-title">{{TITLE}}</h1>
+        <nav class="mad-breadcrumb-path">
+            <span><a href="{{SITE_URL}}" class="mad-link">Home</a></span> / <span><a href="{{SITE_URL}}/blog" class="mad-link">Blog</a></span> / <span>{{TITLE}}</span>
+        </nav>
+      </div>
+    </div>
+    <!--================ End of Breadcrumb ================-->
+    <div class="mad-content">
+      <div class="container">
+        <div class="mad-entities with-date type-2 content-element-12">
+          <!--================ Entity ================-->
+          <article class="mad-entity mad-entity-single content-element-8">
+            <div class="mad-entity-content">
+              <div class="mad-entity-date">
+                <span>{{POST_DAY}}</span>
+                <span>{{POST_MONTH}}/{{POST_YEAR}}</span>
+              </div>
+              <div class="mad-entity-header">
+                <div class="mad-entity-tags">
+                  <span><a href="blog_list_sidebar.html" class="mad-link">{{CATEGORY}}</a></span>
+                  <span><a href="blog_list_sidebar.html" class="mad-link">{{LAST_MODIFIED}}</a></span>
+                  <span>por <a href="blog_list_sidebar.html" class="mad-link">Daniela Fabianesi</a></span>
+                </div>
+                <div class="mad-dropcap style-2 color-2 mad-text-medium content-element-4">
+                  {{CONTENT}}
+                </div>
+                <div class="mad-entity-footer">
+                  <div class="mad-share-wrap type-2">
+                    <span>Tags</span>
+                    <div class="tagcloud">
+                      <a href="blog_classic_sidebar.html">{{POST_TAG_1}}</a>
+                      <a href="blog_classic_sidebar.html">{{POST_TAG_2}}</a>
+                      <a href="blog_classic_sidebar.html">{{POST_TAG_3}}</a>
+                    </div>
+                  </div>
+                  <div class="mad-share-wrap type-2">
+                    <span>Compártelo en Redes Sociales</span>
+                    <div class="mad-social-icons">
+                      <ul>
+                        <li>
+                          <a href="https://www.facebook.com/sharer/sharer.php?u={{ARTICLE_URL}}" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/intent/tweet?text={{TITLE}}&url={{ARTICLE_URL}}" target="_blank"><i class="fab fa-twitter"></i></a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ARTICLE_URL}}" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                          <a href="whatsapp://send?text={{TITLE}} {{ARTICLE_URL}}" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+          <!--================ End of Entity ================-->
+        </div>
+      </div>
+    </div>
+    <!--================ Footer ================-->
+<!--================ Start Footer ================-->
+<footer id="mad-footer" class="mad-footer footer-2">
+  <!--================ Footer row ================-->
+  <div class="container-fluid">
+    <div class="mad-footer-main">
+      <div class="row justify-content-between vr-size-1 hr-size-1">
+        <div class="col-xl-4 col-lg-6 col-sm-12">
+          <!--================ Widget ================-->
+          <section class="mad-widget">
+            <a href="index.html" class="mad-logo content-element-4"><img src="images/logo.png" alt="" /></a>
+            <!-- Imagen en lugar del botón -->
+            <div class="footer-image">
+              <img src="images/footercolegiopsicologos.png" alt="Descripción de la imagen" />
+            </div>
+          </section>
+          <!--================ End of Widget ================-->
+        </div>
+        <div class="col-xl-2 col-lg-3 col-sm-6">
+          <section class="mad-widget">
+            <h6 class="mad-widget-title"><a href="https://danielafabianesi.es/#sobre-mi">Sobre mí</a></h6>
+          </section>
+        </div>
+        <div class="col-xl-2 col-lg-3 col-sm-6">
+          <section class="mad-widget">
+            <h6 class="mad-widget-title"><a href="https://danielafabianesi.es/#servicios">Servicios</a></h6>
+          </section>
+        </div>
+        <div class="col-xl-2 col-lg-6 col-sm-6">
+          <section class="mad-widget">
+            <h6 class="mad-widget-title"><a href="https://danielafabianesi.es/#articulos">Artículos</a></h6>
+          </section>
+        </div>
+        <div class="col-xl-2 col-lg-6 col-sm-6">
+          <section class="mad-widget">
+            <h6 class="mad-widget-title"><a href="https://danielafabianesi.es/#contacto">Contacto</a></h6>
+          </section>
+        </div>
+      </div>
+    </div>
+    <p class="copyrights">Copyright © 2024 <a href="index.html">Daniela Fabianesi</a>. All Rights Reserved.</p>
+  </div>
+  <!--================ End of Footer row ================-->
+</footer>
+<!--================ End Footer ================-->
+    <!--================ End of Footer ================-->
+  </div>
+  <script src="vendors/modernizr.js"></script>
+  <script src="vendors/jquery-3.6.0.min.js"></script>
+  <script src="vendors/jquery.easing.1.3.min.js"></script>
+  <script src="vendors/jquery.parallax-1.1.3.min.js"></script>
+  <script src="vendors/monkeysan.accordion.js"></script>
+  <script src="vendors/monkeysan.jquery.nav.1.0.js"></script>
+  <script src="vendors/monkeysan.validator.min.js"></script>
+  <script src="vendors/handlebars-v4.0.5.min.js"></script>
+  <script src="vendors/jquery-ui/jquery-ui.min.js"></script>
+  <script src="vendors/arcticmodal/jquery.arcticmodal-0.3.min.js"></script>
+  <script src="vendors/retina.min.js"></script>
+  <script src="vendors/sticky-sidebar.js"></script>
+  <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+  <script src="vendors/mad.customselect.js"></script>
+  <script src="vendors/fancybox/jquery.fancybox.min.js"></script>
+  <script src="js/modules/mad.alert-box.min.js"></script>
+  <script src="js/modules/mad.newsletter-form.min.js"></script>
+  <script src="js/modules/mad.sticky-header-section.min.js"></script>
+  <script src="js/mad.app.js"></script>
+</body>
+
+</html>
